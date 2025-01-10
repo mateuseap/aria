@@ -1,6 +1,6 @@
 <h1 align="center">
 	<picture>
-		<img alt="Aria logo" src="assets/logo/aria-logo.png" width="30%">
+		<img alt="Aria logo" src="frontend/src/assets/aria-logo.png" width="50%">
 	</picture>
 </h1>
 
