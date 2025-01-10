@@ -2,7 +2,7 @@ import axios from "axios";
 import type { AxiosRequestConfig, Method } from "axios";
 
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_BACKEND_URL}/api/`,
+  baseURL: `${import.meta.env.VITE_BACKEND_URL}`,
 });
 
 export async function httpRequest(
