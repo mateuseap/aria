@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route("/api/", methods=["GET"])
 def hello_world():
-    return "Hello, World!", 200
+    return "Aria", 200
 
 
 if __name__ == "__main__":
