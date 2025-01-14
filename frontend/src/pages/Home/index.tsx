@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import AriaMascotLogo from "../../assets/mascot-only-logo.png";
+import "./index.css";
 
 export default function Home() {
   const { data, isSuccess, isFetching } = useQuery<string>({
@@ -8,9 +9,9 @@ export default function Home() {
   });
 
   return (
-    <div className="h-[100vh] flex items-center justify-center flex-col mx-6 sm:mx-8 lg:mx-12">
+    <div className="home-container">
       <a
-        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-gray-600 shadow-sm transition-colors hover:bg-gray-100"
+        className="github-link"
         href="https://github.com/mateuseap/aria"
         target="_blank"
         rel="noopener noreferrer"
@@ -31,18 +32,19 @@ export default function Home() {
         src={AriaMascotLogo}
         alt="Aria Mascot Logo"
         loading="lazy"
-        className="mt-8 h-[280px]"
+        className="mascot-logo"
       />
-
-      {isFetching && <p className="mt-4 text-xl font-bold">Loading...</p>}
-      {isSuccess && <p className="mt-4 text-xl font-bold">{data}</p>}
-      <p className="mt-8 text-center font-semibold lg:text-lg">
+      {isFetching && <p className="loading-text">Loading...</p>}
+      {isSuccess && <p className="data-text">{data}</p>}
+      <p className="app-description">
         Let your ideas flow. A simple and efficient note taking app.
       </p>
-      <p className="mt-4 px-6 bg-[#11a6be] text-center text-white lg:text-lg lg:mt-0">
+      <p className="feature-description">
         Simple • Efficient • Inspired by Creativity
       </p>
-      <p className="mt-8">App is under development. Stay tuned!</p>
+      <p className="development-message">
+        App is under development. Stay tuned!
+      </p>
     </div>
   );
 }
