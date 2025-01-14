@@ -1,5 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
 :root {
   font-family: "Geist", serif;
+}
+
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --textarea-background: #f9f9f9;
+  --textarea-border: #ccc;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --textarea-background: #2c2c2c;
+  --textarea-border: #444;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
