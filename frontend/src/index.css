@@ -1,37 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
 :root {
-  --primary: #FAFAFA;
-  --secondary: cornflowerblue;
-  color: #4B5563;
+  font-family: "Geist", serif;
 }
 
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--secondary) var(--primary);
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --textarea-background: #f9f9f9;
+  --textarea-border: #ccc;
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 15px;
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --textarea-background: #2c2c2c;
+  --textarea-border: #444;
 }
 
-*::-webkit-scrollbar-track {
-  background: var(--primary);
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 14px;
-  border: 3px solid var(--primary);
-}
-
-@layer base {
-  html {
-    font-family: Inter;
-  }
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

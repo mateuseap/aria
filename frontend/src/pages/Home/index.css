@@ -1,0 +1,90 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0rem 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s;
+  max-width: 100%;
+}
+
+.github-link:hover {
+  background-color: #f3f4f6;
+}
+
+.mascot-logo {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+}
+
+.loading-text,
+.data-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.app-description {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.feature-description {
+  margin-top: 0px;
+  padding: 0.25rem 1rem;
+  background-color: #11a6be;
+  color: white;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.development-message {
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness (up to 600px) */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .mascot-logo {
+    margin-top: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .loading-text,
+  .data-text {
+    margin: 0;
+  }
+}
+
+/* Desktop responsiveness (above 600px) */
+@media (min-width: 601px) {
+  .home-container {
+    padding: 2rem;
+  }
+
+  .mascot-logo {
+    margin-top: 2rem;
+  }
+}
